@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Parcial</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/pantalla-carga.css">
+
+    <!-- Aplicacion -->
+    <script type="module" src="./app.js"></script>
+</head>
+<body>
+    <!-- Load Screen -->
+    <div id="loader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="main_container">
+        <h1>Segundo Parcial</h1>
+        
+        <!-- Formuario Lista -->
+        <section class="section_container" id="form_container">
+            <h2>Formulario Lista</h2>
+            
+            <!-- Tabla de Datos -->
+            <table id="table_lista" class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th class="encabezado">
+                            <button id="table_id" type="button" class="btn btn-outline-light">ID</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_nombre" type="button" class="btn btn-outline-light">Nombre</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_apellido" type="button" class="btn btn-outline-light">Apellido</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_edad" type="button" class="btn btn-outline-light">Edad</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_equipo" type="button" class="btn btn-outline-light">equipo</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_posicion" type="button" class="btn btn-outline-light">posicion</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_cantGoes" type="button" class="btn btn-outline-light">cantGoes</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_titulo" type="button" class="btn btn-outline-light">titulo</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_facultad" type="button" class="btn btn-outline-light">facultad</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_añoGraduacion" type="button" class="btn btn-outline-light">añoGraduacion</button>
+                        </th>
+                        <th class="encabezado">
+                            <button id="table_modificar" type="button" class="btn btn-outline-light">Modificar</button>
+                        </th>
+                        <th class="encabezado ">
+                            <button id="table_eliminar" type="button" class="btn btn-outline-light">Eliminar</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button id="btn_agregar_persona" class="btn btn-success"><b>Agregar Elemento</b></button>
+        </section>
+
+        <!-- Formulario ABM -->
+        <section class="section_container hidden" id="abm_container">
+            <h2>Formulario ABM</h2>
+
+            <div id="form_abm">
+                <!-- Nombre -->
+                <div class="form-row">
+                    <label class="form-label" for="abm_nombre">Nombre *</label>
+                    <input class="form-control" type="text" id="abm_nombre" required>
+                    <span class="input_tooltip hidden">Este campo es obligatorio</span>
+                </div>
+                <!-- Apellido -->
+                <div class="form-row">
+                    <label class="form-label" for="abm_apellido">Apellido *</label>
+                    <input class="form-control" type="text" id="abm_apellido" required>
+                    <span class="input_tooltip hidden">Este campo es obligatorio</span>
+                </div>
+                <!-- Edad -->
+                <div class="form-row">
+                    <label class="form-label" for="abm_edad">Edad *</label>
+                    <input class="form-control" type="text" id="abm_edad" required>
+                    <span class="input_tooltip hidden">Este campo es obligatorio</span>
+                </div>
+                <!-- Tipo -->
+                <div class="form-row">
+                    <label class="form-label" for="abm_tipo">Tipo</label>
+                    <select class="form-select" id="abm_tipo">
+                        <option value="futbolista">Futbolista</option>
+                        <option value="profesional">Profesional</option>
+                    </select>
+                </div>
+
+                <!-- GENERAR CON CODIGO SEGUN EL TIPO -->
+                <div class="form-row">
+                    <label class="form-label" for="abm_equipo">Equipo *</label>
+                    <input class="form-control" type="text" id="abm_equipo" required>
+                    <span class="input_tooltip hidden">Este campo es obligatorio</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="abm_posicion">Posicion *</label>
+                    <input class="form-control" type="text" id="abm_posicion" required>
+                    <span class="input_tooltip hidden">Este campo es obligatorio</span>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="abm_cantGoles">Cantidad de Goles *</label>
+                    <input class="form-control" type="text" id="abm_cantGoles" required>
+                    <span class="input_tooltip hidden">Este campo es obligatorio</span>
+                </div>
+
+                <div class="form-row hidden">
+                    <label class="form-label" for="abm_titulo">Titulo *</label>
+                    <input class="form-control" type="text" id="abm_titulo" required>
+                    <span class="input_tooltip hidden">Este campo es obligatorio</span>
+                </div>
+
+                <div class="form-row hidden">
+                    <label class="form-label" for="abm_añoGraduacion">Año de graduacion *</label>
+                    <input class="form-control" type="text" id="abm_añoGraduacion" required>
+                    <span class="input_tooltip hidden">Este campo es obligatorio</span>
+                </div>
+            
+                <div class="form-row hidden">
+                    <label class="form-label" for="abm_facultad">Facultad *</label>
+                    <input class="form-control" type="text" id="abm_facultad" required>
+                    <span class="input_tooltip hidden">Este campo es obligatorio</span>
+                </div>
+
+                <div class="form-row" style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <button id="abm_confirmar" type="submit" class="btn btn-primary" style="width: 80px;">Enviar</button>
+                    <button id="abm_cancelar" class="btn btn-danger" style="width: 80px;">Cancelar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
